@@ -1,0 +1,93 @@
+# Add ECMAScript2015 Snippets
+
+snippet imp "ES2015 Import" b
+import ${0:$1} from '${1:module_name}';
+endsnippet
+
+snippet cls "Class" b
+class ${1:class_name} {
+	constructor() {
+		${VISUAL}$0
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet clse "Class Extends" b
+class ${1:class_name} extends ${2:base_class} {
+	constructor() {
+		${VISUAL}$0
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet rpc "React Pure Component" b
+// npm modules
+import React, { PureComponent, PropTypes } from 'react';
+import ReactCSSModules from 'react-css-modules';
+
+// Styles
+import styles from './$1.less';
+
+@ReactCSSModules(styles)
+class ${1:class_name} extends PureComponent {
+	static propTypes = {
+		${VISUAL}$0
+	};
+
+	static defaultProps = {
+
+	};
+
+	constructor(props, context) {
+		super(props, context);
+
+	}
+
+	render(){
+		return (
+			<div styleName="$1">
+			</div>
+		);
+	}
+}
+
+export default $1;
+endsnippet
+
+snippet rc "React Component" b
+// npm modules
+import React, { Component, PropTypes } from 'react';
+import ReactCSSModules from 'react-css-modules';
+
+// Styles
+import styles from './$1.less';
+
+@ReactCSSModules(styles)
+class ${1:class_name} extends Component {
+	static propTypes = {
+		${VISUAL}$0
+	}
+
+	static defaultProps = {
+
+	}
+
+	constructor(props, context) {
+		super(props, context);
+
+	}
+
+	render(){
+		return (
+			<div styleName="$1">
+			</div>
+		);
+	}
+}
+
+export default $1;
+endsnippet
