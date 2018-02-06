@@ -24,16 +24,17 @@ class ${1:class_name} extends ${2:base_class} {
 export default $1;
 endsnippet
 
-snippet rpc "React Pure Component" b
+snippet rcp "React Pure Component" b
 // npm modules
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import ReactCSSModules from 'react-css-modules';
 
 // Styles
-import styles from './$1.less';
+import styles from './`!p snip.rv = snip.fn.rsplit('.', 1)[0]`.less';
 
 @ReactCSSModules(styles)
-class ${1:class_name} extends PureComponent {
+class `!p snip.rv = snip.fn.rsplit('.', 1)[0]` extends PureComponent {
 	static propTypes = {
 		${VISUAL}$0
 	};
@@ -49,25 +50,26 @@ class ${1:class_name} extends PureComponent {
 
 	render(){
 		return (
-			<div styleName="$1">
+			<div styleName="`!p snip.rv = snip.fn.rsplit('.', 1)[0]`">
 			</div>
 		);
 	}
 }
 
-export default $1;
+export default `!p snip.rv = snip.fn.rsplit('.', 1)[0]`;
 endsnippet
 
 snippet rc "React Component" b
 // npm modules
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ReactCSSModules from 'react-css-modules';
 
 // Styles
-import styles from './$1.less';
+import styles from './`!p snip.rv = snip.fn.rsplit('.', 1)[0]`.less';
 
 @ReactCSSModules(styles)
-class ${1:class_name} extends Component {
+class `!p snip.rv = snip.fn.rsplit('.', 1)[0]` extends Component {
 	static propTypes = {
 		${VISUAL}$0
 	}
@@ -83,11 +85,11 @@ class ${1:class_name} extends Component {
 
 	render(){
 		return (
-			<div styleName="$1">
+			<div styleName="`!p snip.rv = snip.fn.rsplit('.', 1)[0]`">
 			</div>
 		);
 	}
 }
 
-export default $1;
+export default `!p snip.rv = snip.fn.rsplit('.', 1)[0]`;
 endsnippet

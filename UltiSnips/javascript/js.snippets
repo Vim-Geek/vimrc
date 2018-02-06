@@ -10,24 +10,6 @@ snippet rq "Require a CMD module"
 const ${1:var_name} = require('$1');
 endsnippet
 
-snippet switch "switch (...) { ... }" b
-switch (${1:enum_var}) {
-  case ${2:case_value}:
-    ${VISUAL}$0
-    break;
-  default:
-    break;
-}
-
-endsnippet
-
-snippet case "case ..." b
-case ${1:case_value}:
-  ${VISUAL}$0
-  break;
-endsnippet
-
 snippet clg "console.log" b
 console.log(${VISUAL}$0);
 endsnippet
-
